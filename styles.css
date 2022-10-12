@@ -1,8 +1,37 @@
 body {
     background-color: hsl(30, 38%, 92%);
+    padding: 0;
+    margin: 0;
 }
-.square {
-    height: 300;
-    width: 300;
-    background-color: orange;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+    grid-template-rows: 200px 500px 200px;
+    grid-template-areas: 
+    ". . ."
+    ". content ."
+    ". . .";
+}
+
+.second-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image text";
+}
+.product-card {
+    grid-area: content;
+    background-color: white;
+    height: auto;
+    border-radius: 15px;
+
+
+}
+
+.image {
+    grid-area: image;
+    height: 500px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
