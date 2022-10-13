@@ -1,91 +1,152 @@
-body {
-    background-color: hsl(30, 38%, 92%);
-    padding: 0;
-    margin: 0;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 32vw 35vw 32vw;
-    grid-template-rows: 12vw 26vw 12vw;
-    grid-template-areas: 
-    ". . ."
-    ". content ."
-    ". . .";
-}
-
-.second-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "image text";
-}
-
-.product-card {
-    grid-area: content;
-    background-color: white;
-    height: auto;
-    border-radius: 15px;
-}
-
-.text {
-    grid-area: text;
-    font-size: 0.85vw;
-    padding: 2vw 2vw 2vw 2vw;
-    font-family: Montserrat;
-    font-weight: 500;
-    line-height: 1.5em;
-    color: hsl(228, 12%, 48%);
+@media (max-width: 1920px) {
+    body {
+        background-color: hsl(30, 38%, 92%);
+        padding: 0;
+        margin: 0;
+    }
     
+    .grid-container {
+        display: grid;
+        grid-template-columns: 32vw 35vw 32vw;
+        grid-template-rows: 12vw 26vw 12vw;
+        grid-template-areas: 
+        ". . ."
+        ". content ."
+        ". . .";
+    }
+    
+    .second-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "image text";
+    }
+    
+    .product-card {
+        grid-area: content;
+        background-color: white;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    .text {
+        grid-area: text;
+        font-size: 0.85vw;
+        padding: 2vw 2vw 2vw 2vw;
+        font-family: Montserrat;
+        font-weight: 500;
+        line-height: 1.5em;
+        color: hsl(228, 12%, 48%);
+        
+    }
+    
+    .title {
+        font-family: Fraunces;
+        font-size: 2vw;
+        line-height: 1em;
+        margin-top: 0.1vw;
+        color: hsl(212, 21%, 14%);
+    }
+    
+    .discount {
+        font-family: Fraunces;
+        color: hsl(158, 36%, 37%);
+        font-size: 2vw;
+    }
+    .price {
+        margin: 1vw;
+        vertical-align: super;
+        text-decoration: line-through;  
+    }
+    
+    .image {
+        content: url('images/image-product-desktop.jpg');
+        grid-area: image;
+        height: 26vw;
+        width: 17.5vw;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    
+    .icon {
+        margin-right: 0.9vw;
+        vertical-align: sub;
+    }
+    p {
+        margin-bottom: 0.8vw;
+    }
+    button {
+        border: none;
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 0.85vw;
+        width: 100%;
+        height: 3vw;
+        border-radius: 10px;
+        text-align: center;
+    }
+    button:hover {
+        background-color: hsl(158, 36%, 27%);
+    }
 }
 
-.fraunces {
-    font-family: Fraunces;
-}
+@media (max-width: 375px) {
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        background-color: hsl(30, 38%, 92%);
+        padding: 0;
+        margin: 0;
+    }
 
-.title {
-    font-size: 2vw;
-    line-height: 1em;
-    margin-top: 0.1vw;
-    color: hsl(212, 21%, 14%);
-}
+    .grid-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 4vw 92vw 4vw;
+        grid-template-rows: 5vh 90vh 5vh;
+        grid-template-areas:
+        ". . ."
+        ". content ."
+        ". . .";
+    }
 
-.discount {
-    color: hsl(158, 36%, 37%);
-    font-size: 2vw;
-}
-.price {
-    margin: 1vw;
-    vertical-align: super;
-    text-decoration: line-through;  
-}
+    .product-card {
+        grid-area: content;
+        background-color: white;
+        height: 100%;
+        border-radius: 15px;
+    }
 
-.image {
-    grid-area: image;
-    height: 26vw;
-    width: 17.5vw;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
+    .second-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35vh 1fr;
+        grid-template-areas: 
+        "image1"
+        "content";
+    }
 
-.icon {
-    margin-right: 0.9vw;
-    vertical-align: sub;
-}
-p {
-    margin-bottom: 0.8vw;
-}
-button {
-    border: none;
-    background-color: hsl(158, 36%, 37%);
-    color: white;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 0.85vw;
-    width: 100%;
-    height: 3vw;
-    border-radius: 10px;
-    text-align: center;
-}
-button:hover {
-    background-color: hsl(158, 36%, 27%);
+    .image {
+        grid-area: image1;
+        content: url('images/image-product-mobile.jpg');
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .text {
+        padding: 2vw 6vw 2vw 6vw;
+        grid-area: content;
+        font-size: 4vw;
+    }
+    .title {
+        font-size: 9vw;
+    }
+    .discount {
+        font-size: 9vw;
+    }
 }
