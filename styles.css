@@ -19,13 +19,20 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "image text";
 }
+
 .product-card {
     grid-area: content;
     background-color: white;
     height: auto;
     border-radius: 15px;
+}
 
-
+.text {
+    grid-area: text;
+    font-size: 14px;
+    padding: 25px 30px;
+    font-family: Montserrat;
+    font-weight: 500;
 }
 
 .image {
