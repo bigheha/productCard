@@ -149,4 +149,15 @@
     .discount {
         font-size: 9vw;
     }
+    .price {
+        margin: 0vh 0vw 0vh 6vw;
+    }
+    p {
+        margin: 3vh 0vw 3vh 0vw;
+    }
+    
+    button {
+        font-size: 3vw;
+        height: 7vh;
+    }
 }
